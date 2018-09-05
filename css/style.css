@@ -11,9 +11,11 @@ body {
   font-weight: bold;
   font-size: 2.5vh;
   color: #492e14;
-  overflow-x: hidden; }
-  body::-webkit-scrollbar {
-    display: none; }
+  /*overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }*/ }
 
 .main-container {
   height: 800vh;
