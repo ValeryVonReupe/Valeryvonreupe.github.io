@@ -1,0 +1,231 @@
+$color-aqua: rgb(58, 141, 113);
+$color-blood: rgb(146, 60, 60);
+$color-steel: rgb(90, 113, 122);
+$color-air: rgb(85, 88, 49);
+$color-smog: rgb(40, 107, 141);
+$color-rottenorange: rgb(145, 60, 39);
+$color-darkpurple: rgb(100, 46, 102);
+$color-oldgrass: rgb(49, 88, 52);
+$color-background: rgb(176, 177, 141);
+$color-font: rgb(73, 46, 20);
+$color-dark: black;
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 5;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2.5vh;
+    color: $color-font;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+.main-container {
+    height: 100vh;
+    width: 800vw;
+    background: $color-background;
+    position: relative;
+}
+
+.menu-top {
+    position: fixed;
+    left: 50%;
+    top: 2vh;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5vh;
+    z-index: 1000;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(5, 25%);
+}
+
+.menu-popup {
+    &-icon {
+        width: 8vh;
+        height: 8vh;
+        top: 9vh;
+        left: 2vh;
+        transform: translate(-50%, -50%);
+        z-index: 1006;
+        position: fixed;
+
+        &-checkbox {
+            display: none;
+        }
+
+        &-checkbox:checked ~ &-background {
+            transform: scale(110);
+            background-position: 100%;
+        }
+
+        &-background {
+            background: radial-gradient(ellipse at center, rgba($color-font,0.6) 0%,rgba($color-dark,1) 70%);
+            border-radius: 50%;
+            position: fixed;
+            width: 4vh;
+            height: 4vh;
+            top: 100%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 1007;
+            transition: all 2s;
+        }
+        
+        &-button {
+            background: $color-font;
+            border-radius: 50%;
+            position: fixed;
+            width: 8vh;
+            height: 8vh;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1008;
+            box-shadow: 0px 10px 20px rgba($color-dark, .3);
+            color: $color-background;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            transition: all 1s;
+                &-text {
+                    margin-top: 50%;
+                    margin-left: 55%;
+                    transform: translate(-50%, -50%);
+                }
+            transform: scale(0.8);
+            &:hover {
+                transform: scale(1);
+                vertical-align: middle;
+                }
+        }
+    }
+}
+
+.content-container {
+    height: 86vh;
+    width: 800vw;
+    top: 7vh;
+    background: white;
+    position: absolute;
+    z-index: 1001;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(8, 100vw);
+    background: $color-background;
+
+    &-sub {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#content-container-sub {
+    &-1 {
+        background: $color-air;
+    }
+    &-2 {
+        background: $color-aqua;
+    }
+    &-3 {
+        background: $color-blood;
+    }
+    &-4 {
+        background: $color-steel;
+    }
+    &-5 {
+        background: $color-smog;
+    }
+    &-6 {
+        background: $color-rottenorange;
+    }
+    &-7 {
+        background: $color-darkpurple;
+    }
+    &-8 {
+        background: $color-oldgrass;
+    }
+}
+
+.menu-bottom {
+    position: fixed;
+    left: 50%;
+    bottom: 2vh;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5vh;
+    z-index: 1000;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(5, 25%);
+}
+
+.btn-1 {
+    &-1 {
+        background: $color-air;
+        border-top-left-radius: 4vh;
+    }
+    &-2 {
+        background: $color-aqua;
+    }
+    &-3 {
+        background: $color-blood;
+    }
+    &-4 {
+        background: $color-steel;
+        border-top-right-radius: 4vh;
+    }
+    &-5 {
+        background: $color-smog;
+        border-bottom-left-radius: 4vh;
+    }
+    &-6 {
+        background: $color-rottenorange;
+    }
+    &-7 {
+        background: $color-darkpurple;
+    }
+    &-8 {
+        background: $color-oldgrass;
+        border-bottom-right-radius: 4vh;
+    }
+}
+
+.btn-1,
+.btn-1-1
+.btn-1-2
+.btn-1-3
+.btn-1-4
+.btn-1-5
+.btn-1-6
+.btn-1-7
+.btn-1-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-transform: lowercase; 
+    color: $color-background;
+    transition: all, .5s;
+    overflow: hidden;
+
+    &:hover {
+        letter-spacing: 15;
+        overflow: hidden;
+    }
+}
