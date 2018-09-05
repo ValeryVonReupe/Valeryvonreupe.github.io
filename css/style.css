@@ -13,7 +13,8 @@ body {
   color: #492e14;
   overflow-x: hidden; }
   body::-webkit-scrollbar {
-    width: .0001%; }
+    width: .0001%;
+    display: initial; }
 
 .main-container {
   height: 800vh;
