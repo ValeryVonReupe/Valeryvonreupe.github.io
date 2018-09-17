@@ -56,10 +56,10 @@ body {
   .menu-popup-icon-checkbox {
     display: none; }
   .menu-popup-icon-checkbox:checked ~ .menu-popup-icon-background {
-    transform: scale(110);
+    transform: scale(150);
     background-position: 100%; }
   .menu-popup-icon-background {
-    background: radial-gradient(ellipse at center, rgba(73, 46, 20, 0.6) 0%, black 70%);
+    background: radial-gradient(ellipse at center, rgba(73, 46, 20, 0.6) 0%, rgba(0, 0, 0, 0.7) 50%);
     border-radius: 50%;
     position: fixed;
     width: 4vh;
@@ -83,6 +83,7 @@ body {
     color: #b0b18d;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 3.5vh;
     transition: all 1s;
     transform: scale(0.8); }
     .menu-popup-icon-button-text {
@@ -90,8 +91,7 @@ body {
       margin-left: 55%;
       transform: translate(-50%, -50%); }
     .menu-popup-icon-button:hover {
-      transform: scale(1);
-      vertical-align: middle; }
+      transform: scale(1); }
 
 .content-container {
   height: 688vh;
@@ -104,7 +104,16 @@ body {
   background: #b0b18d; }
   .content-container-sub {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(640px, 1fr));
+    grid-template-rows: repeat(2, minmax(360px, 1fr));
+    grid-gap: 1vh;
+    padding: 1vh; }
+    .content-container-sub-sub {
+      background: white;
+      width: 100%;
+      height: 100%; }
 
 #content-container-sub-1 {
   background: #555831; }
